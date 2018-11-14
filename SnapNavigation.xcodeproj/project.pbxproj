@@ -8,12 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		AA9EF5B1219CCDF200FAA181 /* SnapNavigation.h in Headers */ = {isa = PBXBuildFile; fileRef = AA9EF5AF219CCDF200FAA181 /* SnapNavigation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA9EF5BB219CDC8D00FAA181 /* SnapNavigationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9EF5B7219CDC8D00FAA181 /* SnapNavigationRouter.swift */; };
+		AA9EF5BC219CDC8D00FAA181 /* SnapNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9EF5B8219CDC8D00FAA181 /* SnapNavigator.swift */; };
+		AA9EF5BD219CDC8D00FAA181 /* SnapNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9EF5B9219CDC8D00FAA181 /* SnapNavigation.swift */; };
+		AA9EF5BE219CDC8D00FAA181 /* SnapNavigationSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9EF5BA219CDC8D00FAA181 /* SnapNavigationSegue.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AA9EF5AC219CCDF200FAA181 /* SnapNavigation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SnapNavigation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA9EF5AF219CCDF200FAA181 /* SnapNavigation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SnapNavigation.h; sourceTree = "<group>"; };
 		AA9EF5B0219CCDF200FAA181 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA9EF5B7219CDC8D00FAA181 /* SnapNavigationRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapNavigationRouter.swift; sourceTree = "<group>"; };
+		AA9EF5B8219CDC8D00FAA181 /* SnapNavigator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapNavigator.swift; sourceTree = "<group>"; };
+		AA9EF5B9219CDC8D00FAA181 /* SnapNavigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapNavigation.swift; sourceTree = "<group>"; };
+		AA9EF5BA219CDC8D00FAA181 /* SnapNavigationSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapNavigationSegue.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +56,10 @@
 			children = (
 				AA9EF5AF219CCDF200FAA181 /* SnapNavigation.h */,
 				AA9EF5B0219CCDF200FAA181 /* Info.plist */,
+				AA9EF5B9219CDC8D00FAA181 /* SnapNavigation.swift */,
+				AA9EF5B7219CDC8D00FAA181 /* SnapNavigationRouter.swift */,
+				AA9EF5BA219CDC8D00FAA181 /* SnapNavigationSegue.swift */,
+				AA9EF5B8219CDC8D00FAA181 /* SnapNavigator.swift */,
 			);
 			path = SnapNavigation;
 			sourceTree = "<group>";
@@ -95,6 +107,7 @@
 				TargetAttributes = {
 					AA9EF5AB219CCDF200FAA181 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -130,6 +143,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA9EF5BD219CDC8D00FAA181 /* SnapNavigation.swift in Sources */,
+				AA9EF5BB219CDC8D00FAA181 /* SnapNavigationRouter.swift in Sources */,
+				AA9EF5BC219CDC8D00FAA181 /* SnapNavigator.swift in Sources */,
+				AA9EF5BE219CDC8D00FAA181 /* SnapNavigationSegue.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -191,7 +208,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -249,6 +266,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -261,6 +279,7 @@
 		AA9EF5B5219CCDF200FAA181 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -278,6 +297,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.plasticbrain.SnapNavigation;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -286,6 +306,7 @@
 		AA9EF5B6219CCDF200FAA181 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
