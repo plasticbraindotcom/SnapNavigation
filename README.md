@@ -4,7 +4,6 @@ Composable navigation for iOS
 [![Language: Swift](https://img.shields.io/badge/language-swift-f48041.svg?style=flat)](https://developer.apple.com/swift)
 ![Platform: iOS 8+](https://img.shields.io/badge/platform-iOS%208%2B-blue.svg?style=flat)
 [![License: MIT](http://img.shields.io/badge/license-MIT-lightgrey.svg?style=flat)](https://github.com/freshOS/then/blob/master/LICENSE)
-![Release version](https://img.shields.io/github/release/freshos/router.svg)
 
 SnapNavigation provides a comprehensive way to define and handle all iOS application navigation concerns.
 
