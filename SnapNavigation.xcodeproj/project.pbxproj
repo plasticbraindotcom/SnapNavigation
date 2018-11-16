@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA474255219F602600ABC47B /* ExampleNavigationSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA474253219F602600ABC47B /* ExampleNavigationSegue.swift */; };
+		AA474256219F602600ABC47B /* ExampleRouteNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA474254219F602600ABC47B /* ExampleRouteNavigator.swift */; };
+		AA474258219F605D00ABC47B /* ExampleViewControllerNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA474257219F605D00ABC47B /* ExampleViewControllerNavigator.swift */; };
+		AA47425A219F613D00ABC47B /* ExampleMinimalNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA474259219F613D00ABC47B /* ExampleMinimalNavigator.swift */; };
+		AA47425C219F61B500ABC47B /* ExampleDefaultNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA47425B219F61B500ABC47B /* ExampleDefaultNavigator.swift */; };
+		AA47425E219F633900ABC47B /* ExampleScratch.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA47425D219F633900ABC47B /* ExampleScratch.swift */; };
 		AA9EF5B1219CCDF200FAA181 /* SnapNavigation.h in Headers */ = {isa = PBXBuildFile; fileRef = AA9EF5AF219CCDF200FAA181 /* SnapNavigation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AA9EF5BB219CDC8D00FAA181 /* SnapNavigationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9EF5B7219CDC8D00FAA181 /* SnapNavigationRouter.swift */; };
 		AA9EF5BC219CDC8D00FAA181 /* SnapNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9EF5B8219CDC8D00FAA181 /* SnapNavigator.swift */; };
@@ -15,6 +21,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AA474253219F602600ABC47B /* ExampleNavigationSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleNavigationSegue.swift; sourceTree = "<group>"; };
+		AA474254219F602600ABC47B /* ExampleRouteNavigator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleRouteNavigator.swift; sourceTree = "<group>"; };
+		AA474257219F605D00ABC47B /* ExampleViewControllerNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleViewControllerNavigator.swift; sourceTree = "<group>"; };
+		AA474259219F613D00ABC47B /* ExampleMinimalNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleMinimalNavigator.swift; sourceTree = "<group>"; };
+		AA47425B219F61B500ABC47B /* ExampleDefaultNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleDefaultNavigator.swift; sourceTree = "<group>"; };
+		AA47425D219F633900ABC47B /* ExampleScratch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleScratch.swift; sourceTree = "<group>"; };
 		AA9EF5AC219CCDF200FAA181 /* SnapNavigation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SnapNavigation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA9EF5AF219CCDF200FAA181 /* SnapNavigation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SnapNavigation.h; sourceTree = "<group>"; };
 		AA9EF5B0219CCDF200FAA181 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -35,10 +47,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AA474252219F602600ABC47B /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				AA474253219F602600ABC47B /* ExampleNavigationSegue.swift */,
+				AA474259219F613D00ABC47B /* ExampleMinimalNavigator.swift */,
+				AA47425B219F61B500ABC47B /* ExampleDefaultNavigator.swift */,
+				AA474254219F602600ABC47B /* ExampleRouteNavigator.swift */,
+				AA474257219F605D00ABC47B /* ExampleViewControllerNavigator.swift */,
+				AA47425D219F633900ABC47B /* ExampleScratch.swift */,
+			);
+			path = Example;
+			sourceTree = "<group>";
+		};
 		AA9EF5A2219CCDF200FAA181 = {
 			isa = PBXGroup;
 			children = (
 				AA9EF5AE219CCDF200FAA181 /* SnapNavigation */,
+				AA474252219F602600ABC47B /* Example */,
 				AA9EF5AD219CCDF200FAA181 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -144,8 +170,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA9EF5BD219CDC8D00FAA181 /* SnapNavigation.swift in Sources */,
+				AA474255219F602600ABC47B /* ExampleNavigationSegue.swift in Sources */,
+				AA474256219F602600ABC47B /* ExampleRouteNavigator.swift in Sources */,
+				AA474258219F605D00ABC47B /* ExampleViewControllerNavigator.swift in Sources */,
+				AA47425C219F61B500ABC47B /* ExampleDefaultNavigator.swift in Sources */,
+				AA47425E219F633900ABC47B /* ExampleScratch.swift in Sources */,
 				AA9EF5BB219CDC8D00FAA181 /* SnapNavigationRouter.swift in Sources */,
 				AA9EF5BC219CDC8D00FAA181 /* SnapNavigator.swift in Sources */,
+				AA47425A219F613D00ABC47B /* ExampleMinimalNavigator.swift in Sources */,
 				AA9EF5BE219CDC8D00FAA181 /* SnapNavigationSegue.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
