@@ -115,8 +115,6 @@ extension MyViewController: SnapNavigatorDataSource {
 //      - Customize the mediation(source:destination:) method to dynamically craft the desired Navigation result.
 //      - Optional: The navigationIntent.presentation can be set, which will override any segue presentation method.
 
-/*
-
 import UIKit
 
 class ExampleNavigationSegue: SnapNavigationSegue {
