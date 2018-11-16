@@ -25,56 +25,47 @@ class MyNavigator: SnapNavigator {}
 // Some particular view controller in your application.
 class MyViewController: UIViewController {
 
-// Create a SnapNavigator that uses only the default implementation methods.
-let navigator = MyNavigator()
+    // Create a SnapNavigator that uses only the default implementation methods.
+    let navigator = MyNavigator()
 
-var someData: String = "Sample data"
+    var someData: String = "Sample data"
 
-// Other code
-// …
+    // Example navigations.
+    func composableNavigationExamples() {
 
-// Example navigations.
-func composableNavigationExamples() {
+        // Note: Some examples show internal creation of a destination view controller. This is not good practice unless the destination is intended as an internally controlled child view controller.
 
-// Note: Some examples show internal creation of a destination view controller. This is not good practice unless the destination is intended as an internally controlled child view controller.
+        // Composable navigation example 1:
+        //  Create a secondary view controller, and show it.
+        let destinationVC = UIViewController()
+        navigator.navigate(from: .viewController(self), to: .viewController(destinationVC), with: .show)
 
-// Composable navigation example 1:
-//  Create a secondary view controller, and show it.
-let destinationVC = UIViewController()
-navigator.navigate(from: .viewController(self), to: .viewController(destinationVC), with: .show)
+        // Composable navigation example 2:
+        //  Create a secondary view controller, pass a value to it via closure and show it.
+        let destinationWithValueVC = MyViewController()
+        let mediation2: (UIViewController, UIViewController) -> () = { source, destination in
+            if let destination = destination as? MyViewController {
+                destination.someData = "Sent message"
+            }
+        }
+        navigator.navigate(from: .viewController(self), to: .viewController(destinationWithValueVC), applying: .method(mediation2), with: .show)
 
-// Composable navigation example 2:
-//  Create a secondary view controller, pass a value to it via closure and show it.
-let destinationWithValueVC = MyViewController()
-let mediation2: (UIViewController, UIViewController) -> () = { source, destination in
-if let destination = destination as? MyViewController {
-destination.someData = "Sent message"
-}
-}
-navigator.navigate(from: .viewController(self), to: .viewController(destinationWithValueVC), applying: .method(mediation2), with: .show)
+        // Composable navigation example 3:
+        //  Navigation using a set navigation model, presenting a second VC and passing a value.
+        let destination3 = MyViewController()
+        let mediation3: (UIViewController, UIViewController) -> () = { source, destination in
+            if let destination = destination as? MyViewController {
+                destination.someData = "Sent message 3"
+            }
+        }
+        let navigation3 = SnapNavigation(
+            source: .viewController(self),
+            destination: .viewController(destination3),
+            mediation: .method(mediation3),
+            presentation: SnapNavigation.Presentation.present(true, {}))
+        navigator.navigate(using: navigation3)
 
-// Composable navigation example 3:
-//  Navigation using a set navigation model, presenting a second VC and passing a value.
-let destination3 = MyViewController()
-let mediation3: (UIViewController, UIViewController) -> () = { source, destination in
-if let destination = destination as? MyViewController {
-destination.someData = "Sent message 3"
-}
-}
-let navigation3 = SnapNavigation(
-source: .viewController(self),
-destination: .viewController(destination3),
-mediation: .method(mediation3),
-presentation: SnapNavigation.Presentation.present(true, {}))
-navigator.navigate(using: navigation3)
-
-// Navigation using provider:
-//  Explicitly set the navigator data provider.
-//  We set ourself as the data provider in this example. See the SnapNavigatorDataSource extension below.
-navigator.navigationProvider = self
-navigator.navigate()
-
-}
+    }
 
 }
 ```
@@ -93,17 +84,17 @@ navigator.navigationProvider = self
 navigator.navigate()
 
 extension MyViewController: SnapNavigatorDataSource {
-func navigation(for navigator: SnapNavigator) -> SnapNavigation {
-let someDestination = UIViewController()
-let someMediation: (UIViewController, UIViewController) -> () = { source, destination in
-destination.title = "Honey I Set the Title!"
-}
-return SnapNavigation(
-source: .viewController(self),
-destination: .viewController(someDestination),
-mediation: .method(someMediation),
-presentation: .show)
-}
+    func navigation(for navigator: SnapNavigator) -> SnapNavigation {
+        let someDestination = UIViewController()
+        let someMediation: (UIViewController, UIViewController) -> () = { source, destination in
+            destination.title = "Honey I Set the Title!"
+        }
+        return SnapNavigation(
+            source: .viewController(self),
+            destination: .viewController(someDestination),
+            mediation: .method(someMediation),
+            presentation: .show)
+    }
 }
 ```
 
@@ -130,21 +121,21 @@ import UIKit
 
 class ExampleNavigationSegue: SnapNavigationSegue {
 
-override var mediation: (UIViewController, UIViewController) -> () {
-get {
-// Perform mediation here.
-return { source, destination in
-// A mediation might look like this:
-//                if let source = source as? ExpectedSourceSubclassOrProtocol,
-//                let destination = destination as? ExpectedDestinationSublassOrProtocol {
-//                    destination.valueToSet = source.providingValue
-//                }
-}
-}
-set {
-// Irrelevant.
-}
-}
+    override var mediation: (UIViewController, UIViewController) -> () {
+        get {
+            // Perform mediation here.
+            return { source, destination in
+            // A mediation might look like this:
+            //                if let source = source as? ExpectedSourceSubclassOrProtocol,
+            //                let destination = destination as? ExpectedDestinationSublassOrProtocol {
+            //                    destination.valueToSet = source.providingValue
+            //                }
+            }
+        }
+        set {
+            // Irrelevant.
+        }
+    }
 
 }
 
@@ -176,52 +167,52 @@ import UIKit
 
 class ExampleRouteNavigator: SnapRouteNavigator {
 
-var navigation: SnapNavigation
+    var navigation: SnapNavigation
 
-// MARK: - Initialization
+    // MARK: - Initialization
 
-init(source: UIViewController) {
-navigation = SnapNavigation(source: source, destination: source)
-}
+    init(source: UIViewController) {
+        navigation = SnapNavigation(source: source, destination: source)
+    }
 
-// MARK: - Navigation
+    // MARK: - Navigation
 
-func navigation<Route: CaseIterable>(for route: Route) -> SnapNavigation? {
-guard let route = route as? ExampleRoute else { return nil }
-switch route {
-case .presentSettings:
-// Set destination / destinationFactory here.
-// Set mediation here.
-// Set presentation here.
-return navigation
-case .showColleagueView(let viewData):
-// Set destination / destinationFactory here.
-// Set mediation here.
-// Set presentation here.
-return navigation
-case .showDetailView(let detailData):
-// Set destination / destinationFactory here.
-// Set mediation here.
-// Set presentation here.
-return navigation
-}
-}
+    func navigation<Route: CaseIterable>(for route: Route) -> SnapNavigation? {
+        guard let route = route as? ExampleRoute else { return nil }
+        switch route {
+        case .presentSettings:
+            // Set destination / destinationFactory here.
+            // Set mediation here.
+            // Set presentation here.
+            return navigation
+        case .showColleagueView(let viewData):
+            // Set destination / destinationFactory here.
+            // Set mediation here.
+            // Set presentation here.
+            return navigation
+        case .showDetailView(let detailData):
+            // Set destination / destinationFactory here.
+            // Set mediation here.
+            // Set presentation here.
+            return navigation
+        }
+    }
 }
 
 enum ExampleRoute: CaseIterable {
 
-// Conformance to CaseIterable.
-static var allCases: [ExampleRoute] {
-return [
-.presentSettings,
-.showColleagueView(viewData: 0),
-.showDetailView(detailData: "")
-]
-}
+    // Conformance to CaseIterable.
+    static var allCases: [ExampleRoute] {
+        return [
+            .presentSettings,
+            .showColleagueView(viewData: 0),
+            .showDetailView(detailData: "")
+        ]
+    }
 
-case presentSettings
-case showColleagueView(viewData: Int)
-case showDetailView(detailData: String)
+    case presentSettings
+    case showColleagueView(viewData: Int)
+    case showDetailView(detailData: String)
 }
 ```
 
