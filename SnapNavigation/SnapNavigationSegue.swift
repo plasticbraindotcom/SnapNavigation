@@ -27,11 +27,11 @@ import UIKit
 /// Such a framework must work with the storyboard instantiation lifecycle
 /// to properly set the values when this object is created but before
 /// the `perform` method is triggered.
-public class SnapNavigationSegue: UIStoryboardSegue, SnapNavigationMediator {
+open class SnapNavigationSegue: UIStoryboardSegue, SnapNavigationMediator {
 
     // Set a custom intent to override both mediation and presentation.
     // A custom intent with a nil mediation will default to using internal `mediation`.
-    public var intent: SnapNavigationIntent? {
+    open var intent: SnapNavigationIntent? {
         get {
             return navigation.intent
         }
@@ -43,17 +43,17 @@ public class SnapNavigationSegue: UIStoryboardSegue, SnapNavigationMediator {
         }
     }
     
-    public func mediate(source: UIViewController, destination: UIViewController) {
+    open func mediate(source: UIViewController, destination: UIViewController) {
         // Perform mediation.
         mediation(source, destination)
     }
     
     // Navigation mediation method.
     // Override this value as needed in subclass to apply desired mediation.
-    public var mediation: (UIViewController, UIViewController) -> () = { _, _ in }
+    open var mediation: (UIViewController, UIViewController) -> () = { _, _ in }
     
     // Presentation is normally handled by the segue storyboard attributes, but can be custom overriden here.
-    public var presentation: SnapNavigation.Presentation? {
+    open var presentation: SnapNavigation.Presentation? {
         get {
             return navigation.presentation
         }
@@ -64,7 +64,7 @@ public class SnapNavigationSegue: UIStoryboardSegue, SnapNavigationMediator {
     
     // Setting a mediator to a non-nil value will override the internal `mediation`.
     // Setting mediator to nil falls back to using the internal `mediation`.
-    public var mediator: SnapNavigationMediator? {
+    open var mediator: SnapNavigationMediator? {
         get {
             guard let mediation = navigation.mediation else { return self }
             switch mediation {
@@ -105,7 +105,7 @@ public class SnapNavigationSegue: UIStoryboardSegue, SnapNavigationMediator {
     }
     
     /// Performs the visual transition for the segue.
-    public override func perform() {
+    open override func perform() {
         
         // Perform navigation concerns (optional mediation, then optional presentation).
         navigator?.navigate(using: navigation)
@@ -117,7 +117,7 @@ public class SnapNavigationSegue: UIStoryboardSegue, SnapNavigationMediator {
     }
     
     // Determines if segue should perform `UIStoryboardSegue` transition using the segue Kind attribute set in the storyboard instance.
-    public var shouldPerform: Bool {
+    open var shouldPerform: Bool {
         return navigation.presentation == nil
     }
     
