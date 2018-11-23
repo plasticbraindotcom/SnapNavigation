@@ -267,13 +267,15 @@ There are a number of `navigate` methods provided, allowing for a wide variety o
 
 SnapNavigationSegue is a base `UIStoryboardSegue` class implementing a navigation intent.
 
-This is intended to be subclassed. A subclass with no custom implementations will behave as a standard `UIStoryboardSegue`.
+This is intended to be subclassed. A subclass with no custom implementations will behave as a standard `UIStoryboardSegue`.  Custom `UIStoryboardSegue` classes are intended to handle custom presentation scenarios. Using a `SnapNavigationSegue` allows for full navigation customization (mediation and presentation), moving all navigation code into the segue class and removing the requirement to handle navigation in the `UIViewController` invoking the navigation in a `prepare(for:)` method.
 
 To provide a custom mediation in your subclass, simply override `mediation`. This is the primary intended use case.
 
 Alternatively, or in conjunction with `mediation` override, `intent`, `mediator`, or `presentation` can be overriden. Setting `mediator` gets precedence over `mediation`. A set `presentation` takes precedence over the internal `UIStoryboardSegue` presentation method triggered in the `perform` function.
 
 As an alternative to custom dedicated subclasses, a dependency injection container can be used to set the desired navigation intent values. Such a framework must work with the storyboard instantiation lifecycle to properly set the values when this object is created but before the `perform` method is triggered.
+
+`SnapNavigationSegue` will not work for embed segues, nor will it handle unwind segue methods. Neither of these segue types work by instantiating a `UIStoryboardSegue`. This is as intended, since the focus of embed and unwind segue actions are considered contained responsibilities of the view controller. An embed segue describes an relationship between a parent view controller and a child view controller, in which setup of the child view controller should be handled in the parent `prepare(for:)` method. An unwind segue acts on the established object hierarchy graph of the storyboard where the target view controller of the unwind should express capability to handle the unwind through a custom `@IBAction` function. If desired, both embed and unwind can be composed together in an extension to organize navigation code.
 
 ## Routes: Powerful convenience for particular navigations
 
