@@ -21,4 +21,6 @@ Comprehensively define and handle all view navigation concerns.
 
   s.source_files  = "Classes", "Sources/SnapNavigation/*.{h,m,swift}"
 
+  s.swift_version = '4.2'
+
 end
