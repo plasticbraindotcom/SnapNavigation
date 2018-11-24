@@ -1,13 +1,130 @@
 # SnapNavigation
 Composable view navigation for iOS
 
-[![Language: Swift](https://img.shields.io/badge/language-swift-f48041.svg?style=flat)](https://developer.apple.com/swift)
-![Platform: iOS 8+](https://img.shields.io/badge/platform-iOS%208%2B-blue.svg?style=flat)
+[![Language: Swift 4.2](https://img.shields.io/badge/language-swift-f48041.svg?style=flat)](https://developer.apple.com/swift)
+![Platform: iOS 11.4+](https://img.shields.io/badge/platform-iOS%208%2B-blue.svg?style=flat)
 [![License: MIT](http://img.shields.io/badge/license-MIT-lightgrey.svg?style=flat)](https://github.com/freshOS/then/blob/master/LICENSE)
 
 SnapNavigation provides a comprehensive way to define and handle all iOS application view navigation concerns.
 
 SnapNavigation allows you to separate navigation code into dedicated objects, empowering you to snap together each aspect in any way you see fit: dynamically determining source and destination views, mediation between actors, and presentational code. It works with navigation actions triggered from code as well as from UIStoryboard action segues.
+
+- [Requirements](#requirements)
+- [Installation](#installation)
+- [Quick Start](#quick)
+- [Introduction](#introduction)
+- [SnapNavigation](#snapnavigation)
+- [SnapNavigator](#snapnavigator)
+- [SnapNavigationSegue](#snapnavigationsegue)
+- [Routes](#routes)
+- [License](#license)
+
+## Requirements
+
+- iOS 8.0+ / Mac OS X 10.10+ / tvOS 9.0+ / watchOS 2.0+
+- Xcode 10.0+
+
+## Installation
+
+### Dependency Managers
+<details>
+<summary><strong>CocoaPods</strong></summary>
+
+[CocoaPods](http://cocoapods.org) is a dependency manager for Cocoa projects. You can install it with the following command:
+
+```bash
+$ gem install cocoapods
+```
+
+To integrate SnapNavigation into your Xcode project using CocoaPods, specify it in your `Podfile`:
+
+```ruby
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '11.4'
+use_frameworks!
+
+pod 'SnapNavigation', '~> 1.0.2'
+```
+
+Then, run the following command:
+
+```bash
+$ pod install
+```
+
+</details>
+
+<details>
+<summary><strong>Carthage</strong></summary>
+
+[Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that automates the process of adding frameworks to your Cocoa application.
+
+You can install Carthage with [Homebrew](http://brew.sh/) using the following command:
+
+```bash
+$ brew update
+$ brew install carthage
+```
+
+To integrate SnapNavigation into your Xcode project using Carthage, specify it in your `Cartfile`:
+
+```ogdl
+github "plasticbraindotcom/SnapNavigation" ~> 1.0.2
+```
+
+</details>
+
+### Manually
+
+If you prefer not to use either of the aforementioned dependency managers, you can integrate SnapNavigation into your project manually.
+
+<details>
+<summary><strong>Git Submodules</strong></summary><p>
+
+- Open up Terminal, `cd` into your top-level project directory, and run the following command "if" your project is not initialized as a git repository:
+
+```bash
+$ git init
+```
+
+- Add SnapNavigation as a git [submodule](http://git-scm.com/docs/git-submodule) by running the following command:
+
+```bash
+$ git submodule add https://github.com/plasticbraindotcom/SnapNavigation.git
+$ git submodule update --init --recursive
+```
+
+- Open the new `SnapNavigation` folder, and drag the `SnapNavigation.xcodeproj` into the Project Navigator of your application's Xcode project.
+
+> It should appear nested underneath your application's blue project icon. Whether it is above or below all the other Xcode groups does not matter.
+
+- Select the `SnapNavigation.xcodeproj` in the Project Navigator and verify the deployment target matches that of your application target.
+- Next, select your application project in the Project Navigator (blue project icon) to navigate to the target configuration window and select the application target under the "Targets" heading in the sidebar.
+- In the tab bar at the top of that window, open the "General" panel.
+- Click on the `+` button under the "Embedded Binaries" section.
+- You will see two different `SnapNavigation.xcodeproj` folders each with two different versions of the `SnapNavigation.framework` nested inside a `Products` folder.
+
+> It does not matter which `Products` folder you choose from.
+
+- Select the `SnapNavigation.framework`.
+
+- And that's it!
+
+> The `SnapNavigation.framework` is automagically added as a target dependency, linked framework and embedded framework in a copy files build phase which is all you need to build on the simulator and a device.
+
+</p></details>
+
+<details>
+<summary><strong>Embedded Binaries</strong></summary><p>
+
+- Download the latest release from https://github.com/plasticbraindotcom/SnapNavigation/releases
+- Next, select your application project in the Project Navigator (blue project icon) to navigate to the target configuration window and select the application target under the "Targets" heading in the sidebar.
+- In the tab bar at the top of that window, open the "General" panel.
+- Click on the `+` button under the "Embedded Binaries" section.
+- Add the downloaded `SnapNavigation.framework`.
+- And that's it!
+
+</p></details>
 
 ## Quick Start
 
@@ -282,3 +399,15 @@ As an alternative to custom dedicated subclasses, a dependency injection contain
 Routes are expressed as a `CaseIterable` types. Routes define concrete navigation use cases. They allow numerous specific navigation needs to be expressed from an object triggering a navigation, decoupling the navigation implementation details. A `SnapNavigationRouter` maps a given route to a `SnapNavigation` usable by a `SnapNavigator`.
 
 Routes defined as enumerations with associated values can be used to provide conditional intent (e.g. mediation payload) as long they conform to `CaseIterable`, in conjuntion with a concrete `SnapNavigationRouter` class `navigation` function switch.
+
+## Contributing
+
+Issues and pull requests are welcome!
+
+## Author
+
+Stephen Downs [@plasticbrain](https://twitter.com/plasticbrain)
+
+## License
+
+SnapNavigation is released under the MIT license. See [LICENSE](https://github.com/plasticbraindotcom/SnapNavigation/blob/master/LICENSE) for details.
