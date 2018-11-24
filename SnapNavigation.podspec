@@ -19,7 +19,6 @@ Comprehensively define and handle all view navigation concerns.
 
   s.source       = { :git => "https://github.com/plasticbraindotcom/SnapNavigation.git", :tag => "#{s.version}" }
 
-  s.source_files  = "Classes", "Sources/SnapNavigation/**/*.{h,m}"
-  s.exclude_files = "Classes/Exclude"
+  s.source_files  = "Classes", "Sources/SnapNavigation/*.{h,m,swift}"
 
 end
