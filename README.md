@@ -1,7 +1,6 @@
 # SnapNavigation
 Composable view navigation for iOS
 
-![Version: 1.0.4](https://img.shields.io/github/release/qubyte/rubidium.svg?style=flat)
 [![Language: Swift 4.2](https://img.shields.io/badge/language-swift-f48041.svg?style=flat)](https://developer.apple.com/swift)
 ![Platform: iOS 10.0+](https://img.shields.io/badge/platform-iOS%208%2B-blue.svg?style=flat)
 [![License: MIT](http://img.shields.io/badge/license-MIT-lightgrey.svg?style=flat)](https://github.com/freshOS/then/blob/master/LICENSE)
