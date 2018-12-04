@@ -1,7 +1,6 @@
 # SnapNavigation
 Composable view navigation for iOS
 
-![Version: 1.0.4](https://img.shields.io/github/release/qubyte/rubidium.svg?style=flat)
 [![Language: Swift 4.2](https://img.shields.io/badge/language-swift-f48041.svg?style=flat)](https://developer.apple.com/swift)
 ![Platform: iOS 10.0+](https://img.shields.io/badge/platform-iOS%208%2B-blue.svg?style=flat)
 [![License: MIT](http://img.shields.io/badge/license-MIT-lightgrey.svg?style=flat)](https://github.com/freshOS/then/blob/master/LICENSE)
@@ -22,7 +21,7 @@ SnapNavigation allows you to separate navigation code into dedicated objects, em
 
 ## Requirements
 
-- iOS 8.0+ / Mac OS X 10.10+ / tvOS 9.0+ / watchOS 2.0+
+- iOS 10.0+
 - Xcode 10.0+
 
 ## Installation
@@ -44,7 +43,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '11.4'
 use_frameworks!
 
-pod 'SnapNavigation', '~> 1.0.3'
+pod 'SnapNavigation', '~> 1.0.4'
 ```
 
 Then, run the following command:
@@ -70,7 +69,7 @@ $ brew install carthage
 To integrate SnapNavigation into your Xcode project using Carthage, specify it in your `Cartfile`:
 
 ```ogdl
-github "plasticbraindotcom/SnapNavigation" ~> 1.0.3
+github "plasticbraindotcom/SnapNavigation" ~> 1.0.4
 ```
 
 </details>
