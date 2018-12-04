@@ -1,8 +1,9 @@
 # SnapNavigation
 Composable view navigation for iOS
 
+![Version: 1.0.4](https://img.shields.io/github/release/qubyte/rubidium.svg?style=flat)
 [![Language: Swift 4.2](https://img.shields.io/badge/language-swift-f48041.svg?style=flat)](https://developer.apple.com/swift)
-![Platform: iOS 11.4+](https://img.shields.io/badge/platform-iOS%208%2B-blue.svg?style=flat)
+![Platform: iOS 10.0+](https://img.shields.io/badge/platform-iOS%208%2B-blue.svg?style=flat)
 [![License: MIT](http://img.shields.io/badge/license-MIT-lightgrey.svg?style=flat)](https://github.com/freshOS/then/blob/master/LICENSE)
 
 SnapNavigation provides a comprehensive way to define and handle all iOS application view navigation concerns.
@@ -11,12 +12,12 @@ SnapNavigation allows you to separate navigation code into dedicated objects, em
 
 - [Requirements](#requirements)
 - [Installation](#installation)
-- [Quick Start](#quick)
+- [Quick Start](#quick-start)
 - [Introduction](#introduction)
-- [SnapNavigation](#snapnavigation)
-- [SnapNavigator](#snapnavigator)
-- [SnapNavigationSegue](#snapnavigationsegue)
-- [Routes](#routes)
+- [SnapNavigation](#snapnavigation:-the-data-model-describing-navigation)
+- [SnapNavigator](#snapnavigator:-an-object-that-performs-a-navigation)
+- [SnapNavigationSegue](#snapnavigationsegue:-a-uistoryboardsegue-performing-a-custom-navigation)
+- [Routes](#routes:-powerful-convenience-for-particular-navigations)
 - [License](#license)
 
 ## Requirements
@@ -43,7 +44,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '11.4'
 use_frameworks!
 
-pod 'SnapNavigation', '~> 1.0.2'
+pod 'SnapNavigation', '~> 1.0.3'
 ```
 
 Then, run the following command:
@@ -69,7 +70,7 @@ $ brew install carthage
 To integrate SnapNavigation into your Xcode project using Carthage, specify it in your `Cartfile`:
 
 ```ogdl
-github "plasticbraindotcom/SnapNavigation" ~> 1.0.2
+github "plasticbraindotcom/SnapNavigation" ~> 1.0.3
 ```
 
 </details>

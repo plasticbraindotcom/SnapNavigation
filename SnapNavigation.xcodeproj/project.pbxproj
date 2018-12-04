@@ -6,114 +6,124 @@
 	objectVersion = 50;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		AAB56D7421B70F0000C117A1 /* SnapNavigationUniversal */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = AAB56D7521B70F0000C117A1 /* Build configuration list for PBXAggregateTarget "SnapNavigationUniversal" */;
+			buildPhases = (
+				AAB56D7821B70F2800C117A1 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = SnapNavigationUniversal;
+			productName = SnapNavigationUniversal;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
-		AADD593621A8AD3900D3441F /* SnapNavigation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AADD592C21A8AD3900D3441F /* SnapNavigation.framework */; };
-		AADD593B21A8AD3900D3441F /* SnapNavigationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADD593A21A8AD3900D3441F /* SnapNavigationTests.swift */; };
-		AADD593D21A8AD3900D3441F /* SnapNavigation.h in Headers */ = {isa = PBXBuildFile; fileRef = AADD592F21A8AD3900D3441F /* SnapNavigation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AADD594C21A8ADAB00D3441F /* SnapNavigationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADD594821A8ADAB00D3441F /* SnapNavigationRouter.swift */; };
-		AADD594D21A8ADAB00D3441F /* SnapNavigationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADD594821A8ADAB00D3441F /* SnapNavigationRouter.swift */; };
-		AADD594E21A8ADAB00D3441F /* SnapNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADD594921A8ADAB00D3441F /* SnapNavigation.swift */; };
-		AADD594F21A8ADAB00D3441F /* SnapNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADD594921A8ADAB00D3441F /* SnapNavigation.swift */; };
-		AADD595021A8ADAB00D3441F /* SnapNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADD594A21A8ADAB00D3441F /* SnapNavigator.swift */; };
-		AADD595121A8ADAB00D3441F /* SnapNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADD594A21A8ADAB00D3441F /* SnapNavigator.swift */; };
-		AADD595221A8ADAB00D3441F /* SnapNavigationSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADD594B21A8ADAB00D3441F /* SnapNavigationSegue.swift */; };
-		AADD595321A8ADAB00D3441F /* SnapNavigationSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADD594B21A8ADAB00D3441F /* SnapNavigationSegue.swift */; };
+		AAB56D5A21B70D7000C117A1 /* SnapNavigation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAB56D5021B70D7000C117A1 /* SnapNavigation.framework */; };
+		AAB56D5F21B70D7000C117A1 /* SnapNavigationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB56D5E21B70D7000C117A1 /* SnapNavigationTests.swift */; };
+		AAB56D6121B70D7000C117A1 /* SnapNavigation.h in Headers */ = {isa = PBXBuildFile; fileRef = AAB56D5321B70D7000C117A1 /* SnapNavigation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAB56D7021B70DFF00C117A1 /* SnapNavigationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB56D6C21B70DFF00C117A1 /* SnapNavigationRouter.swift */; };
+		AAB56D7121B70DFF00C117A1 /* SnapNavigationSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB56D6D21B70DFF00C117A1 /* SnapNavigationSegue.swift */; };
+		AAB56D7221B70DFF00C117A1 /* SnapNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB56D6E21B70DFF00C117A1 /* SnapNavigation.swift */; };
+		AAB56D7321B70DFF00C117A1 /* SnapNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB56D6F21B70DFF00C117A1 /* SnapNavigator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		AADD593721A8AD3900D3441F /* PBXContainerItemProxy */ = {
+		AAB56D5B21B70D7000C117A1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = AADD592321A8AD3900D3441F /* Project object */;
+			containerPortal = AAB56D4721B70D7000C117A1 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = AADD592B21A8AD3900D3441F;
+			remoteGlobalIDString = AAB56D4F21B70D7000C117A1;
 			remoteInfo = SnapNavigation;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		AADD592C21A8AD3900D3441F /* SnapNavigation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SnapNavigation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AADD592F21A8AD3900D3441F /* SnapNavigation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SnapNavigation.h; sourceTree = "<group>"; };
-		AADD593021A8AD3900D3441F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AADD593521A8AD3900D3441F /* SnapNavigationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SnapNavigationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AADD593A21A8AD3900D3441F /* SnapNavigationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapNavigationTests.swift; sourceTree = "<group>"; };
-		AADD593C21A8AD3900D3441F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AADD594821A8ADAB00D3441F /* SnapNavigationRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapNavigationRouter.swift; sourceTree = "<group>"; };
-		AADD594921A8ADAB00D3441F /* SnapNavigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapNavigation.swift; sourceTree = "<group>"; };
-		AADD594A21A8ADAB00D3441F /* SnapNavigator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapNavigator.swift; sourceTree = "<group>"; };
-		AADD594B21A8ADAB00D3441F /* SnapNavigationSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapNavigationSegue.swift; sourceTree = "<group>"; };
+		AAB56D5021B70D7000C117A1 /* SnapNavigation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SnapNavigation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAB56D5321B70D7000C117A1 /* SnapNavigation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SnapNavigation.h; sourceTree = "<group>"; };
+		AAB56D5421B70D7000C117A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AAB56D5921B70D7000C117A1 /* SnapNavigationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SnapNavigationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAB56D5E21B70D7000C117A1 /* SnapNavigationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapNavigationTests.swift; sourceTree = "<group>"; };
+		AAB56D6021B70D7000C117A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AAB56D6C21B70DFF00C117A1 /* SnapNavigationRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapNavigationRouter.swift; sourceTree = "<group>"; };
+		AAB56D6D21B70DFF00C117A1 /* SnapNavigationSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapNavigationSegue.swift; sourceTree = "<group>"; };
+		AAB56D6E21B70DFF00C117A1 /* SnapNavigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapNavigation.swift; sourceTree = "<group>"; };
+		AAB56D6F21B70DFF00C117A1 /* SnapNavigator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapNavigator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		AADD592921A8AD3900D3441F /* Frameworks */ = {
+		AAB56D4D21B70D7000C117A1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AADD593221A8AD3900D3441F /* Frameworks */ = {
+		AAB56D5621B70D7000C117A1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AADD593621A8AD3900D3441F /* SnapNavigation.framework in Frameworks */,
+				AAB56D5A21B70D7000C117A1 /* SnapNavigation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		AADD592221A8AD3900D3441F = {
+		AAB56D4621B70D7000C117A1 = {
 			isa = PBXGroup;
 			children = (
-				AADD594621A8AD6100D3441F /* Sources */,
-				AADD594721A8AD7200D3441F /* Tests */,
-				AADD592D21A8AD3900D3441F /* Products */,
+				AAB56D6A21B70DAD00C117A1 /* Sources */,
+				AAB56D6B21B70DD700C117A1 /* Tests */,
+				AAB56D5121B70D7000C117A1 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		AADD592D21A8AD3900D3441F /* Products */ = {
+		AAB56D5121B70D7000C117A1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AADD592C21A8AD3900D3441F /* SnapNavigation.framework */,
-				AADD593521A8AD3900D3441F /* SnapNavigationTests.xctest */,
+				AAB56D5021B70D7000C117A1 /* SnapNavigation.framework */,
+				AAB56D5921B70D7000C117A1 /* SnapNavigationTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		AADD592E21A8AD3900D3441F /* SnapNavigation */ = {
+		AAB56D5221B70D7000C117A1 /* SnapNavigation */ = {
 			isa = PBXGroup;
 			children = (
-				AADD592F21A8AD3900D3441F /* SnapNavigation.h */,
-				AADD593021A8AD3900D3441F /* Info.plist */,
-				AADD594921A8ADAB00D3441F /* SnapNavigation.swift */,
-				AADD594821A8ADAB00D3441F /* SnapNavigationRouter.swift */,
-				AADD594B21A8ADAB00D3441F /* SnapNavigationSegue.swift */,
-				AADD594A21A8ADAB00D3441F /* SnapNavigator.swift */,
+				AAB56D5321B70D7000C117A1 /* SnapNavigation.h */,
+				AAB56D5421B70D7000C117A1 /* Info.plist */,
+				AAB56D6E21B70DFF00C117A1 /* SnapNavigation.swift */,
+				AAB56D6C21B70DFF00C117A1 /* SnapNavigationRouter.swift */,
+				AAB56D6D21B70DFF00C117A1 /* SnapNavigationSegue.swift */,
+				AAB56D6F21B70DFF00C117A1 /* SnapNavigator.swift */,
 			);
 			path = SnapNavigation;
 			sourceTree = "<group>";
 		};
-		AADD593921A8AD3900D3441F /* SnapNavigationTests */ = {
+		AAB56D5D21B70D7000C117A1 /* SnapNavigationTests */ = {
 			isa = PBXGroup;
 			children = (
-				AADD593A21A8AD3900D3441F /* SnapNavigationTests.swift */,
-				AADD593C21A8AD3900D3441F /* Info.plist */,
+				AAB56D5E21B70D7000C117A1 /* SnapNavigationTests.swift */,
+				AAB56D6021B70D7000C117A1 /* Info.plist */,
 			);
 			path = SnapNavigationTests;
 			sourceTree = "<group>";
 		};
-		AADD594621A8AD6100D3441F /* Sources */ = {
+		AAB56D6A21B70DAD00C117A1 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				AADD592E21A8AD3900D3441F /* SnapNavigation */,
+				AAB56D5221B70D7000C117A1 /* SnapNavigation */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
 		};
-		AADD594721A8AD7200D3441F /* Tests */ = {
+		AAB56D6B21B70DD700C117A1 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				AADD593921A8AD3900D3441F /* SnapNavigationTests */,
+				AAB56D5D21B70D7000C117A1 /* SnapNavigationTests */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -121,25 +131,25 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		AADD592721A8AD3900D3441F /* Headers */ = {
+		AAB56D4B21B70D7000C117A1 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AADD593D21A8AD3900D3441F /* SnapNavigation.h in Headers */,
+				AAB56D6121B70D7000C117A1 /* SnapNavigation.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		AADD592B21A8AD3900D3441F /* SnapNavigation */ = {
+		AAB56D4F21B70D7000C117A1 /* SnapNavigation */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AADD594021A8AD3900D3441F /* Build configuration list for PBXNativeTarget "SnapNavigation" */;
+			buildConfigurationList = AAB56D6421B70D7000C117A1 /* Build configuration list for PBXNativeTarget "SnapNavigation" */;
 			buildPhases = (
-				AADD592721A8AD3900D3441F /* Headers */,
-				AADD592821A8AD3900D3441F /* Sources */,
-				AADD592921A8AD3900D3441F /* Frameworks */,
-				AADD592A21A8AD3900D3441F /* Resources */,
+				AAB56D4B21B70D7000C117A1 /* Headers */,
+				AAB56D4C21B70D7000C117A1 /* Sources */,
+				AAB56D4D21B70D7000C117A1 /* Frameworks */,
+				AAB56D4E21B70D7000C117A1 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -147,73 +157,77 @@
 			);
 			name = SnapNavigation;
 			productName = SnapNavigation;
-			productReference = AADD592C21A8AD3900D3441F /* SnapNavigation.framework */;
+			productReference = AAB56D5021B70D7000C117A1 /* SnapNavigation.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		AADD593421A8AD3900D3441F /* SnapNavigationTests */ = {
+		AAB56D5821B70D7000C117A1 /* SnapNavigationTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AADD594321A8AD3900D3441F /* Build configuration list for PBXNativeTarget "SnapNavigationTests" */;
+			buildConfigurationList = AAB56D6721B70D7000C117A1 /* Build configuration list for PBXNativeTarget "SnapNavigationTests" */;
 			buildPhases = (
-				AADD593121A8AD3900D3441F /* Sources */,
-				AADD593221A8AD3900D3441F /* Frameworks */,
-				AADD593321A8AD3900D3441F /* Resources */,
+				AAB56D5521B70D7000C117A1 /* Sources */,
+				AAB56D5621B70D7000C117A1 /* Frameworks */,
+				AAB56D5721B70D7000C117A1 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				AADD593821A8AD3900D3441F /* PBXTargetDependency */,
+				AAB56D5C21B70D7000C117A1 /* PBXTargetDependency */,
 			);
 			name = SnapNavigationTests;
 			productName = SnapNavigationTests;
-			productReference = AADD593521A8AD3900D3441F /* SnapNavigationTests.xctest */;
+			productReference = AAB56D5921B70D7000C117A1 /* SnapNavigationTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		AADD592321A8AD3900D3441F /* Project object */ = {
+		AAB56D4721B70D7000C117A1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1010;
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = plasticbrain;
 				TargetAttributes = {
-					AADD592B21A8AD3900D3441F = {
+					AAB56D4F21B70D7000C117A1 = {
 						CreatedOnToolsVersion = 10.1;
 						LastSwiftMigration = 1010;
 					};
-					AADD593421A8AD3900D3441F = {
+					AAB56D5821B70D7000C117A1 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					AAB56D7421B70F0000C117A1 = {
 						CreatedOnToolsVersion = 10.1;
 					};
 				};
 			};
-			buildConfigurationList = AADD592621A8AD3900D3441F /* Build configuration list for PBXProject "SnapNavigation" */;
+			buildConfigurationList = AAB56D4A21B70D7000C117A1 /* Build configuration list for PBXProject "SnapNavigation" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = AADD592221A8AD3900D3441F;
-			productRefGroup = AADD592D21A8AD3900D3441F /* Products */;
+			mainGroup = AAB56D4621B70D7000C117A1;
+			productRefGroup = AAB56D5121B70D7000C117A1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AADD592B21A8AD3900D3441F /* SnapNavigation */,
-				AADD593421A8AD3900D3441F /* SnapNavigationTests */,
+				AAB56D4F21B70D7000C117A1 /* SnapNavigation */,
+				AAB56D5821B70D7000C117A1 /* SnapNavigationTests */,
+				AAB56D7421B70F0000C117A1 /* SnapNavigationUniversal */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		AADD592A21A8AD3900D3441F /* Resources */ = {
+		AAB56D4E21B70D7000C117A1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AADD593321A8AD3900D3441F /* Resources */ = {
+		AAB56D5721B70D7000C117A1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -222,42 +236,58 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		AAB56D7821B70F2800C117A1 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Merge Script\n\n# 1\n# Set bash script to exit immediately if any commands fail.\nset -e\n\n# 2\n# Setup some constants for use later on.\nFRAMEWORK_NAME=\"SnapNavigation\"\n\n# 3\n# If remnants from a previous build exist, delete them.\nif [ -d \"${SRCROOT}/build\" ]; then\nrm -rf \"${SRCROOT}/build\"\nfi\n\n# 4\n# Build the framework for device and for simulator (using\n# all needed architectures).\nenv -i xcodebuild -target \"${FRAMEWORK_NAME}\" -configuration Release -arch arm64 only_active_arch=no defines_module=yes -sdk \"iphoneos\"\nenv -i xcodebuild -target \"${FRAMEWORK_NAME}\" -configuration Release -arch x86_64 only_active_arch=no defines_module=yes -sdk \"iphonesimulator\"\n\n# xcodebuild -target \"${FRAMEWORK_NAME}\" -sdk \"iphonesimulator\" -configuration ${CONFIGURATION clean build CONFIGURATION_BUILD_DIR=${BUILD_DIR}/${CONFIGURATION}-iphonesimulator 2>&1\n\n# xcodebuild -target \"${FRAMEWORK_NAME}\" -sdk \"iphoneos\" -configuration ${CONFIGURATION} clean build CONFIGURATION_BUILD_DIR=${BUILD_DIR}/${CONFIGURATION}-iphoneos 2>&1\n\n# 5\n# Remove .framework file if exists on Desktop from previous run.\nif [ -d \"${HOME}/Desktop/${FRAMEWORK_NAME}.framework\" ]; then\nrm -rf \"${HOME}/Desktop/${FRAMEWORK_NAME}.framework\"\nfi\n\n# 6\n# Copy the device version of framework to Desktop.\ncp -r \"${SRCROOT}/build/Release-iphoneos/${FRAMEWORK_NAME}.framework\" \"${HOME}/Desktop/${FRAMEWORK_NAME}.framework\"\n\n# 7\n# Replace the framework executable within the framework with\n# a new version created by merging the device and simulator\n# frameworks' executables with lipo.\nlipo -create -output \"${HOME}/Desktop/${FRAMEWORK_NAME}.framework/${FRAMEWORK_NAME}\" \"${SRCROOT}/build/Release-iphoneos/${FRAMEWORK_NAME}.framework/${FRAMEWORK_NAME}\" \"${SRCROOT}/build/Release-iphonesimulator/${FRAMEWORK_NAME}.framework/${FRAMEWORK_NAME}\"\n\n# 8\n# Copy the Swift module mappings for the simulator into the\n# framework.  The device mappings already exist from step 6.\ncp -r \"${SRCROOT}/build/Release-iphonesimulator/${FRAMEWORK_NAME}.framework/Modules/${FRAMEWORK_NAME}.swiftmodule/\" \"${HOME}/Desktop/${FRAMEWORK_NAME}.framework/Modules/${FRAMEWORK_NAME}.swiftmodule\"\n\n# 9\n# Delete the most recent build.\nif [ -d \"${SRCROOT}/build\" ]; then\nrm -rf \"${SRCROOT}/build\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		AADD592821A8AD3900D3441F /* Sources */ = {
+		AAB56D4C21B70D7000C117A1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AADD594C21A8ADAB00D3441F /* SnapNavigationRouter.swift in Sources */,
-				AADD594E21A8ADAB00D3441F /* SnapNavigation.swift in Sources */,
-				AADD595021A8ADAB00D3441F /* SnapNavigator.swift in Sources */,
-				AADD595221A8ADAB00D3441F /* SnapNavigationSegue.swift in Sources */,
+				AAB56D7221B70DFF00C117A1 /* SnapNavigation.swift in Sources */,
+				AAB56D7021B70DFF00C117A1 /* SnapNavigationRouter.swift in Sources */,
+				AAB56D7121B70DFF00C117A1 /* SnapNavigationSegue.swift in Sources */,
+				AAB56D7321B70DFF00C117A1 /* SnapNavigator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AADD593121A8AD3900D3441F /* Sources */ = {
+		AAB56D5521B70D7000C117A1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AADD594F21A8ADAB00D3441F /* SnapNavigation.swift in Sources */,
-				AADD594D21A8ADAB00D3441F /* SnapNavigationRouter.swift in Sources */,
-				AADD593B21A8AD3900D3441F /* SnapNavigationTests.swift in Sources */,
-				AADD595321A8ADAB00D3441F /* SnapNavigationSegue.swift in Sources */,
-				AADD595121A8ADAB00D3441F /* SnapNavigator.swift in Sources */,
+				AAB56D5F21B70D7000C117A1 /* SnapNavigationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		AADD593821A8AD3900D3441F /* PBXTargetDependency */ = {
+		AAB56D5C21B70D7000C117A1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = AADD592B21A8AD3900D3441F /* SnapNavigation */;
-			targetProxy = AADD593721A8AD3900D3441F /* PBXContainerItemProxy */;
+			target = AAB56D4F21B70D7000C117A1 /* SnapNavigation */;
+			targetProxy = AAB56D5B21B70D7000C117A1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		AADD593E21A8AD3900D3441F /* Debug */ = {
+		AAB56D6221B70D7000C117A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -291,7 +321,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1.0.2;
+				CURRENT_PROJECT_VERSION = 1.0.4;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -309,19 +339,21 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				INFOPLIST_FILE = Sources/SnapNavigation/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		AADD593F21A8AD3900D3441F /* Release */ = {
+		AAB56D6321B70D7000C117A1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -355,7 +387,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1.0.2;
+				CURRENT_PROJECT_VERSION = 1.0.4;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -367,19 +399,21 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				INFOPLIST_FILE = Sources/SnapNavigation/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.2;
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
-		AADD594121A8AD3900D3441F /* Debug */ = {
+		AAB56D6521B70D7000C117A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
@@ -403,10 +437,11 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "arm64 arm64e armv7 armv7s i386 x86_64";
 			};
 			name = Debug;
 		};
-		AADD594221A8AD3900D3441F /* Release */ = {
+		AAB56D6621B70D7000C117A1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
@@ -429,10 +464,11 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "arm64 arm64e armv7 armv7s i386 x86_64";
 			};
 			name = Release;
 		};
-		AADD594421A8AD3900D3441F /* Debug */ = {
+		AAB56D6821B70D7000C117A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -451,7 +487,7 @@
 			};
 			name = Debug;
 		};
-		AADD594521A8AD3900D3441F /* Release */ = {
+		AAB56D6921B70D7000C117A1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -470,37 +506,64 @@
 			};
 			name = Release;
 		};
+		AAB56D7621B70F0000C117A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AUJ5T35M6M;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		AAB56D7721B70F0000C117A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AUJ5T35M6M;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		AADD592621A8AD3900D3441F /* Build configuration list for PBXProject "SnapNavigation" */ = {
+		AAB56D4A21B70D7000C117A1 /* Build configuration list for PBXProject "SnapNavigation" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AADD593E21A8AD3900D3441F /* Debug */,
-				AADD593F21A8AD3900D3441F /* Release */,
+				AAB56D6221B70D7000C117A1 /* Debug */,
+				AAB56D6321B70D7000C117A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AADD594021A8AD3900D3441F /* Build configuration list for PBXNativeTarget "SnapNavigation" */ = {
+		AAB56D6421B70D7000C117A1 /* Build configuration list for PBXNativeTarget "SnapNavigation" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AADD594121A8AD3900D3441F /* Debug */,
-				AADD594221A8AD3900D3441F /* Release */,
+				AAB56D6521B70D7000C117A1 /* Debug */,
+				AAB56D6621B70D7000C117A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AADD594321A8AD3900D3441F /* Build configuration list for PBXNativeTarget "SnapNavigationTests" */ = {
+		AAB56D6721B70D7000C117A1 /* Build configuration list for PBXNativeTarget "SnapNavigationTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AADD594421A8AD3900D3441F /* Debug */,
-				AADD594521A8AD3900D3441F /* Release */,
+				AAB56D6821B70D7000C117A1 /* Debug */,
+				AAB56D6921B70D7000C117A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AAB56D7521B70F0000C117A1 /* Build configuration list for PBXAggregateTarget "SnapNavigationUniversal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AAB56D7621B70F0000C117A1 /* Debug */,
+				AAB56D7721B70F0000C117A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = AADD592321A8AD3900D3441F /* Project object */;
+	rootObject = AAB56D4721B70D7000C117A1 /* Project object */;
 }

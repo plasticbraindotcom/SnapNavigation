@@ -271,7 +271,7 @@ public protocol SnapNavigationMediator {
 
 // `SnapNavigationMediator` default implementation.
 extension SnapNavigationMediator {
-    func mediate(source: UIViewController, destination: UIViewController) {
+    public func mediate(source: UIViewController, destination: UIViewController) {
         // Perform mediation.
         mediation(source, destination)
     }
@@ -298,7 +298,7 @@ public protocol SnapNavigationPresenter {
 
 // `SnapNavigationPresenter` default implementation.
 extension SnapNavigationPresenter {
-    func present(source: UIViewController, destination: UIViewController) {
+    public func present(source: UIViewController, destination: UIViewController) {
         // Perform presentation.
         presentation(source, destination)
     }
