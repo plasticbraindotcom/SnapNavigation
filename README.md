@@ -21,7 +21,7 @@ SnapNavigation allows you to separate navigation code into dedicated objects, em
 
 ## Requirements
 
-- iOS 8.0+ / Mac OS X 10.10+ / tvOS 9.0+ / watchOS 2.0+
+- iOS 10.0+
 - Xcode 10.0+
 
 ## Installation
@@ -43,7 +43,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '11.4'
 use_frameworks!
 
-pod 'SnapNavigation', '~> 1.0.3'
+pod 'SnapNavigation', '~> 1.0.4'
 ```
 
 Then, run the following command:
@@ -69,7 +69,7 @@ $ brew install carthage
 To integrate SnapNavigation into your Xcode project using Carthage, specify it in your `Cartfile`:
 
 ```ogdl
-github "plasticbraindotcom/SnapNavigation" ~> 1.0.3
+github "plasticbraindotcom/SnapNavigation" ~> 1.0.4
 ```
 
 </details>
