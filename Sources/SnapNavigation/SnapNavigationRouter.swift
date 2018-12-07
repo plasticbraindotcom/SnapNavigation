@@ -42,12 +42,76 @@ public protocol SnapRouteNavigator: SnapNavigator & SnapNavigationRouter {
     ///
     /// - Parameter using: Route describing the navigation path.
     func navigate<Route: CaseIterable>(using route: Route)
+    
+    /// Perform navigation using given `Route` with an intent override.
+    ///
+    /// - Parameter using: Route describing the navigation path.
+    /// - Parameter with: Intent object describing transitional
+    /// animation and presentation.
+    func navigate<Route: CaseIterable>(using route: Route, with intent: SnapNavigationIntent)
+    
+    /// Perform navigation using given `Route` with a mediation override.
+    ///
+    /// - Parameter using: Route describing the navigation path.
+    /// - Parameter applying: Mediation object or method performing
+    /// transformation.
+    func navigate<Route: CaseIterable>(using route: Route, applying mediation: SnapNavigation.Mediation)
+    
+    /// Perform navigation using given `Route` with a mediation method override.
+    ///
+    /// - Parameter using: Route describing the navigation path.
+    /// - Parameter applying: Mediation method performing transformation.
+    func navigate<Route: CaseIterable>(using route: Route, applying mediationMethod: @escaping SnapNavigationMediation)
+    
+    /// Perform navigation using given `Route` with a presentation override.
+    ///
+    /// - Parameter using: Route describing the navigation path.
+    /// - Parameter with: Presentation object or method for transitional
+    /// animation and presentation.
+    func navigate<Route: CaseIterable>(using route: Route, with presentation: SnapNavigation.Presentation)
+    
+    /// Perform navigation using given `Route` with a presentation method override.
+    ///
+    /// - Parameter using: Route describing the navigation path.
+    /// - Parameter with: Presentation method for transitional
+    /// animation and presentation.
+    func navigate<Route: CaseIterable>(using route: Route, with presentationMethod: @escaping SnapNavigationPresentation)
 }
 
-// `SnapRouteNavigator` default implementation.
+// `SnapRouteNavigator` default implementations.
 extension SnapRouteNavigator {
     public func navigate<Route: CaseIterable>(using route: Route) {
         guard let navigation = navigation(for: route) else { return }
         navigate(using: navigation)
+    }
+    
+    public func navigate<Route: CaseIterable>(using route: Route, with intent: SnapNavigationIntent) {
+        guard let navigation = navigation(for: route) else { return }
+        let composedNavigation = SnapNavigation(source: navigation.source, destination: navigation.destination, intent: intent)
+        navigate(using: composedNavigation)
+    }
+    
+    public func navigate<Route: CaseIterable>(using route: Route, applying mediation: SnapNavigation.Mediation) {
+        guard let navigation = navigation(for: route) else { return }
+        let composedNavigation = SnapNavigation(source: navigation.source, destination: navigation.destination, mediation: mediation)
+        navigate(using: composedNavigation)
+    }
+    
+    public func navigate<Route: CaseIterable>(using route: Route, applying mediationMethod: @escaping SnapNavigationMediation) {
+        guard let navigation = navigation(for: route) else { return }
+        let composedNavigation = SnapNavigation(source: navigation.source, destination: navigation.destination, mediation: SnapNavigation.Mediation.method(mediationMethod))
+        navigate(using: composedNavigation)
+    }
+    
+    public func navigate<Route: CaseIterable>(using route: Route, with presentation: SnapNavigation.Presentation) {
+        guard let navigation = navigation(for: route) else { return }
+        let composedNavigation = SnapNavigation(source: navigation.source, destination: navigation.destination, mediation: navigation.mediation, presentation: presentation)
+        navigate(using: composedNavigation)
+    }
+    
+    public func navigate<Route: CaseIterable>(using route: Route, with presentationMethod: @escaping SnapNavigationPresentation) {
+        guard let navigation = navigation(for: route) else { return }
+        let composedNavigation = SnapNavigation(source: navigation.source, destination: navigation.destination, mediation: navigation.mediation, presentation: SnapNavigation.Presentation.method(presentationMethod))
+        navigate(using: composedNavigation)
     }
 }
